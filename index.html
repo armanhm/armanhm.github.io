@@ -3,59 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arman Hosseinmardi — AI/ML & Software Engineer</title>
-  <meta name="description" content="Resume website for Arman Hosseinmardi — AI/ML Engineer & Software Engineer. Projects, experience, skills, and contact." />
-  <meta property="og:title" content="Arman Hosseinmardi — AI/ML & Software Engineer" />
-  <meta property="og:description" content="Projects, experience, skills, and contact." />
+  <meta name="color-scheme" content="dark light" />
+  <title>Arman Hosseinmardi — Resume</title>
+  <meta name="description" content="Arman Hosseinmardi · AI/ML & Software Engineer. Experience, skills, education, and contact." />
+  <meta property="og:title" content="Arman Hosseinmardi — Resume" />
+  <meta property="og:description" content="AI/ML & Software Engineer. Experience, skills, education, and contact." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-USERNAME.github.io" />
+  <meta property="og:url" content="https://armanhm.github.io" />
   <meta name="theme-color" content="#0ea5e9" />
   <link rel="icon" href="favicon.ico" />
   <style>
-    :root{--bg:#0b1020;--panel:#111832;--text:#e6e9f2;--muted:#b0b7cc;--brand:#38bdf8;--chip:#1a2347;--stroke:#223055}
+    :root{
+      --bg:#090e1c;--panel:#0f1730;--panel-2:#0b1228;--text:#e8ecf5;--muted:#aab2c5;--stroke:#1e2b4d;--brand:#3cc5ff;--brand-2:#7dd3fc;--good:#10b981
+    }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:radial-gradient(1000px 600px at 80% -10%, #193a64 0%, #0b1020 60%), var(--bg)}
-    a{color:var(--brand);text-decoration:none}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:
+      radial-gradient(1200px 700px at 80% -10%, #15325c 0%, transparent 55%),
+      radial-gradient(700px 500px at -10% 10%, #10244b 0%, transparent 55%),
+      var(--bg)}
+    a{color:var(--brand)}
     a:hover{text-decoration:underline}
-    .container{max-width:980px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,16,32,.6);border-bottom:1px solid var(--stroke);z-index:50}
-    nav{display:flex;gap:18px;align-items:center;justify-content:space-between}
-    nav .links a{padding:10px 12px;border-radius:10px}
-    nav .links a:hover{background:var(--chip)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:42px 0}
-    .hero .card{background:linear-gradient(180deg, rgba(56,189,248,.12), rgba(56,189,248,.04));border:1px solid var(--stroke);border-radius:18px;padding:24px}
-    .tag{display:inline-block;padding:6px 10px;border:1px solid var(--stroke);border-radius:999px;background:var(--chip);color:var(--muted);font-size:12px;margin-right:8px}
-    .title{font-size:40px;line-height:1.15;margin:10px 0 6px}
-    .subtitle{color:var(--muted)}
-    .cta{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--stroke);background:#0f1730;color:var(--text);cursor:pointer}
-    .btn.primary{background:var(--brand);color:#06131f;border-color:#54c7fb}
-    .btn:hover{filter:brightness(1.05)}
+    .container{max-width:1060px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:40;background:rgba(9,14,28,.65);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--stroke)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:700}
+    .navlinks{display:flex;gap:6px;flex-wrap:wrap}
+    .navlinks a{padding:10px 12px;border-radius:10px;color:var(--text)}
+    .navlinks a:hover{background:rgba(255,255,255,.04)}
+
+    /* Hero */
+    .hero{display:grid;gap:22px;place-items:center;padding:58px 0}
+    .badge{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid var(--stroke);border-radius:999px;background:rgba(60,197,255,.08);color:var(--muted);font-size:12px}
+    h1.title{margin:8px 0 6px;font-size:42px;line-height:1.15;text-align:center}
+    .subtitle{color:var(--muted);text-align:center;max-width:70ch}
+    .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid var(--stroke);background:linear-gradient(180deg,#0d1631,#0b1228);color:var(--text);text-decoration:none}
+    .btn.primary{background:linear-gradient(180deg,var(--brand-2),var(--brand));color:#051420;border-color:#3cc5ff}
+
+    /* Cards */
     section{margin:28px 0}
-    .section-card{background:rgba(17,24,50,.6);border:1px solid var(--stroke);border-radius:18px;padding:20px}
-    h2{font-size:24px;margin:0 0 12px}
-    .grid{display:grid;gap:12px}
-    .grid.cols-2{grid-template-columns:1fr 1fr}
-    .xp{display:grid;gap:6px;padding:14px;border:1px solid var(--stroke);border-radius:14px;background:linear-gradient(180deg, rgba(26,35,71,.8), rgba(17,24,50,.6))}
-    .xp h3{margin:0;font-size:18px}
-    .xp .where{color:var(--muted);font-size:14px}
-    .xp ul{margin:8px 0 0 18px}
+    .card{background:linear-gradient(180deg,rgba(60,197,255,.10),rgba(60,197,255,.04));border:1px solid var(--stroke);border-radius:20px;padding:22px}
+    h2{margin:0 0 10px;font-size:24px}
+
+    /* Experience */
+    .xp{display:grid;gap:12px}
+    .xp-item{padding:16px;border:1px solid var(--stroke);border-radius:14px;background:linear-gradient(180deg,var(--panel),var(--panel-2))}
+    .xp-item h3{margin:0 0 2px;font-size:18px}
+    .meta{color:var(--muted);font-size:14px}
+    .xp-item ul{margin:8px 0 0 18px}
+
+    /* Skills */
     .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{padding:6px 10px;background:var(--chip);border:1px solid var(--stroke);border-radius:999px;color:var(--muted);font-size:12px}
+    .chip{padding:6px 10px;border:1px solid var(--stroke);border-radius:999px;background:#0f1a36;color:var(--muted);font-size:12px}
+
+    /* Footer */
     footer{padding:28px 0;color:var(--muted);text-align:center}
-    .avatar{width:140px;height:140px;border-radius:20px;border:1px solid var(--stroke);background:linear-gradient(180deg, #1a2347, #0e1631);display:flex;align-items:center;justify-content:center;font-weight:700;color:#94e0ff}
-    .right-card{display:grid;gap:12px}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#0c142b;border:1px solid var(--stroke);padding:2px 6px;border-radius:6px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}} 
+
+    @media (max-width:760px){
+      h1.title{font-size:34px}
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <nav>
-        <strong>Arman Hosseinmardi</strong>
-        <div class="links">
+        <div class="brand">Arman Hosseinmardi</div>
+        <div class="navlinks">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
@@ -67,66 +84,68 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="card">
-        <span class="tag">AI/ML Engineer • Software Engineer</span>
-        <h1 class="title">Building intelligent, scalable systems</h1>
-        <p class="subtitle">I architect backend modules, integrate LLM/RAG pipelines, and ship reliable data & ML workflows for enterprise-scale platforms.</p>
-        <div class="cta">
-          <a class="btn primary" href="./Resume-Arman-Hosseinmardi.pdf" download>Download Résumé</a>
-          <a class="btn" href="https://www.linkedin.com/in/arman-hosseinmardi" target="_blank" rel="noopener">LinkedIn</a>
-          <button class="btn" onclick="document.getElementById('email').click()">Email</button>
-        </div>
-      </div>
-      <div class="right-card">
-        <div class="avatar">
-          <img src="Profile%20Picture%20github.png" alt="Profile photo of Arman Hosseinmardi" />
-        </div>
-        <div class="section-card" id="about">
-          <h2>About</h2>
-          <p>Results-driven engineer focused on bridging research with production for document intelligence and automation. Comfortable across data engineering, backend APIs, and ML systems.</p>
-        </div>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <span class="badge">AI/ML Engineer • Software Engineer</span>
+      <h1 class="title">Building intelligent, scalable systems</h1>
+      <p class="subtitle">I architect backend modules, integrate LLM/RAG pipelines, and ship reliable data & ML workflows for enterprise-scale platforms.</p>
+      <div class="ctas">
+        <a class="btn primary" href="./Resume-Arman-Hosseinmardi.pdf" download>Download Résumé</a>
+        <a class="btn" href="https://www.linkedin.com/in/arman-hosseinmardi" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="mailto:armanhosseinmardi@gmail.com">Email</a>
       </div>
     </section>
 
-    <section id="experience" class="section-card">
+    <!-- About -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>Results-driven engineer focused on bridging research with production for document intelligence and automation. Comfortable across data engineering, backend APIs, and ML systems.</p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="card">
       <h2>Experience</h2>
-      <div class="grid">
-        <article class="xp">
-          <h3>AI Software Engineer Intern <span class="where">• CREO Solutions — Aug 2024–Present</span></h3>
+      <div class="xp">
+        <div class="xp-item">
+          <h3>AI Software Engineer Intern</h3>
+          <div class="meta">CREO Solutions — Aug 2024–Present • Montreal, QC</div>
           <ul>
             <li>Architected backend modules to deploy LLM-based NLP with LangChain & RAG for contextual document querying.</li>
             <li>Designed pipelines supporting fine-tuning with private corpora and integrated internal evaluation suites.</li>
             <li>Integrated semantic validation / human-in-the-loop review to increase trust in enterprise workflows.</li>
             <li>Built ETL pipelines (Python, Airflow) to normalize & vectorize documents for semantic search.</li>
           </ul>
-        </article>
-        <article class="xp">
-          <h3>AI SWE & Research Assistant <span class="where">• Concordia University Innovation Lab — Jan 2024–Present</span></h3>
+        </div>
+        <div class="xp-item">
+          <h3>AI SWE & Research Assistant</h3>
+          <div class="meta">Concordia University Innovation Lab — Jan 2024–Present</div>
           <ul>
             <li>Engineered cloud-native APIs for cyberviolence detection with LLMs and fine-tuned classifiers (Azure).</li>
             <li>Developed RAG pipelines with vector search and LangChain toolchains for sensitive content detection.</li>
-            <li>Built multi-stage NLP workflows incl. prompt engineering and evaluation frameworks.</li>
+            <li>Built multi-stage NLP workflows including prompt engineering and evaluation frameworks.</li>
             <li>Automated PEFT/LoRA experimentation for resource-constrained GPUs.</li>
           </ul>
-        </article>
-        <article class="xp">
-          <h3>Data Science Researcher <span class="where">• Shahid Beheshti University — Jun 2021–Jul 2023</span></h3>
+        </div>
+        <div class="xp-item">
+          <h3>Data Science Researcher</h3>
+          <div class="meta">Shahid Beheshti University — Jun 2021–Jul 2023</div>
           <ul>
             <li>Led research & engineering for large-scale text classification and content safety.</li>
             <li>Designed evaluation pipelines and reproducible experiments for NLP models.</li>
           </ul>
-        </article>
-        <article class="xp">
-          <h3>Teaching Assistant (Multiple Courses) <span class="where">• 2019–2022</span></h3>
+        </div>
+        <div class="xp-item">
+          <h3>Teaching Assistant (Multiple Courses)</h3>
+          <div class="meta">2019–2022</div>
           <ul>
             <li>Guided students across ML, discrete math, and advanced programming with hands-on labs and reviews.</li>
           </ul>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="section-card">
+    <!-- Skills -->
+    <section id="skills" class="card">
       <h2>Skills</h2>
       <div class="chips">
         <span class="chip">Python</span>
@@ -142,47 +161,35 @@
         <span class="chip">Snowflake</span>
         <span class="chip">Databricks</span>
         <span class="chip">Spark</span>
-        <span class="chip">Data Viz</span>
+        <span class="chip">Data Visualization</span>
       </div>
     </section>
 
-    <section id="education" class="section-card">
+    <!-- Education -->
+    <section id="education" class="card">
       <h2>Education</h2>
-      <div class="grid cols-2">
-        <div>
+      <div style="display:grid;gap:12px">
+        <div class="xp-item">
           <strong>Concordia University</strong>
-          <div class="subtitle">M.A.Sc., Information & Quality Systems Engineering — Sep 2023–Aug 2025</div>
+          <div class="meta">M.A.Sc., Information & Quality Systems Engineering — Sep 2023–Aug 2025</div>
         </div>
-        <div>
+        <div class="xp-item">
           <strong>Shahid Beheshti University</strong>
-          <div class="subtitle">B.Sc., Computer Engineering — Sep 2018–Jan 2023</div>
+          <div class="meta">B.Sc., Computer Engineering — Sep 2018–Jan 2023</div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section-card">
+    <!-- Contact -->
+    <section id="contact" class="card">
       <h2>Contact</h2>
       <p>Montreal, Quebec, Canada</p>
       <p>
-        <a id="email" href="mailto:armanhosseinmardi@gmail.com">armanhosseinmardi@gmail.com</a> • 
-        <a href="tel:+14384393515">+1 (438) 439-3515</a> • 
+        <a id="email" href="mailto:armanhosseinmardi@gmail.com">armanhosseinmardi@gmail.com</a> ·
+        <a href="tel:+14384393515">+1 (438) 439-3515</a> ·
         <a href="https://www.linkedin.com/in/arman-hosseinmardi" target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </section>
-
-    <section class="section-card" aria-label="Site usage instructions">
-      <h2>How this site is built</h2>
-      <p>Single-file static site. To customize, edit <span class="kbd">index.html</span>. Host via GitHub Pages in a repository named <span class="kbd">YOUR-USERNAME.github.io</span>. Replace <em>YOUR-USERNAME</em> with your GitHub username.</p>
-      <details>
-        <summary>Optional enhancements</summary>
-        <ul>
-          <li>Add <span class="kbd">favicon.ico</span> and a profile image (replace the <em>AH</em> placeholder box).</li>
-          <li>Track visits by embedding your preferred analytics snippet.</li>
-          <li>Set a custom domain (e.g., <em>arman.dev</em>) in repo Settings → Pages → Custom domain.</li>
-        </ul>
-      </details>
-    </section>
-
   </main>
 
   <footer>
